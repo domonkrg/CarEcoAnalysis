@@ -1,3 +1,5 @@
+# Author: Rylee Domonkos
+
 # Imports ----------------------------------------------------------------------
 
 if(require(pacman)==F) install.packages("pacman")
@@ -80,10 +82,6 @@ unlink(temp)
 # Build full datafame and make data tidy and consistent ------------------------
 
 full.data = rbind(data1, data2, data3, data4, data5, data6, data7)
-
-create_report(full.data, output_file = "starting_report.html", output_dir = getwd())
-create_report(full.data, output_file = "starting_report.docx", output_format = 
-                "word_document", output_dir = getwd())
 
 final.data <- full.data %>%
   mutate(`Vehicle Class` = Veh.Class, 
